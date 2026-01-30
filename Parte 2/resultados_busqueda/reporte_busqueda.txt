@@ -1,0 +1,45 @@
+======================================================================
+REPORTE DE BÚSQUEDA - NAVEGACIÓN EN BODEGA
+======================================================================
+
+INFORMACIÓN DEL GRAFO
+----------------------------------------------------------------------
+Nodos (zonas): 8
+Arcos (conexiones): 10
+Zonas: ['Start', 'A', 'B', 'C', 'D', 'E', 'F', 'Goal']
+
+DICCIONARIO DE ADYACENCIAS
+----------------------------------------------------------------------
+'A': ['Start', 'C', 'D']
+'B': ['Start', 'D', 'E']
+'C': ['A', 'Goal']
+'D': ['A', 'B', 'F']
+'E': ['B', 'F']
+'F': ['D', 'E', 'Goal']
+'Goal': ['C', 'F']
+'Start': ['A', 'B']
+
+RESULTADOS DE BFS (Breadth-First Search)
+----------------------------------------------------------------------
+Camino encontrado: Start → A → C → Goal
+Longitud del camino: 4 pasos
+Nodos explorados: 7
+Garantía: Camino MÁS CORTO ✓
+
+RESULTADOS DE DFS (Depth-First Search)
+----------------------------------------------------------------------
+Camino encontrado: Start → A → C → Goal
+Longitud del camino: 4 pasos
+Nodos explorados: 4
+Garantía: Encuentra un camino (no necesariamente el más corto)
+
+COMPARACIÓN
+----------------------------------------------------------------------
+BFS - Longitud: 4 | Nodos explorados: 7
+DFS - Longitud: 4 | Nodos explorados: 4
+
+Empate: Ambos encontraron caminos de igual longitud
+
+======================================================================
+FIN DEL REPORTE
+======================================================================
