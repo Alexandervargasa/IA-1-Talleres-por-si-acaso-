@@ -1,0 +1,98 @@
+======================================================================
+EJERCICIO 2.2: ANÁLISIS COMPARATIVO BFS vs DFS
+======================================================================
+
+1. INFORMACIÓN DEL GRAFO
+----------------------------------------------------------------------
+Nodos totales: 8
+Arcos totales: 10
+Nodos: ['A', 'B', 'C', 'D', 'E', 'F', 'Goal', 'Start']
+
+2. BREADTH-FIRST SEARCH (BFS)
+----------------------------------------------------------------------
+Camino encontrado: Start → A → C → Goal
+Número de saltos (hops): 3
+Nodos en el camino: 4
+Nodos visitados: 8
+Orden de exploración: Start → A → B → C → D → E → Goal → F
+Porcentaje de nodos explorados: 100.0%
+
+3. DEPTH-FIRST SEARCH (DFS)
+----------------------------------------------------------------------
+Camino encontrado: Start → A → C → Goal
+Número de saltos (hops): 3
+Nodos en el camino: 4
+Nodos visitados: 4
+Orden de exploración: Start → A → C → Goal
+Porcentaje de nodos explorados: 50.0%
+
+4. COMPARACIÓN
+----------------------------------------------------------------------
+BFS - Saltos: 3 | Visitados: 8
+DFS - Saltos: 3 | Visitados: 4
+
+🤝 EMPATE: Ambos algoritmos encontraron caminos de igual longitud
+
+5. ANÁLISIS: ¿Cuál algoritmo encontró el camino más corto?
+----------------------------------------------------------------------
+
+RESPUESTA:
+El algoritmo BFS (Breadth-First Search) encontró el camino más corto
+con 3 saltos.
+
+¿POR QUÉ BFS GARANTIZA EL CAMINO MÁS CORTO?
+
+1. ESTRATEGIA DE EXPLORACIÓN:
+   BFS explora el grafo por NIVELES (anchura), visitando primero todos
+   los nodos a distancia 1, luego todos a distancia 2, y así sucesivamente.
+   Esto garantiza que cuando BFS encuentra el objetivo, ha encontrado el
+   camino con menor número de saltos.
+
+   Exploración de BFS (por niveles):
+   Nivel 0: Start
+   Nivel 1: A, B
+   Nivel 2: C, D, E
+   Nivel 3: Goal, F
+
+2. ESTRUCTURA DE DATOS:
+   BFS usa una COLA (FIFO - First In, First Out), lo que asegura que
+   los nodos se procesen en el orden en que se descubren. Esto mantiene
+   la exploración sistemática por niveles.
+
+3. COMPLETITUD Y OPTIMALIDAD:
+   • Completitud: BFS siempre encuentra una solución si existe
+   • Optimalidad: BFS SIEMPRE encuentra el camino más corto en grafos
+                  no ponderados (donde todos los arcos tienen peso 1)
+
+¿POR QUÉ DFS NO GARANTIZA EL CAMINO MÁS CORTO?
+
+1. ESTRATEGIA DE EXPLORACIÓN:
+   DFS explora el grafo en PROFUNDIDAD, yendo tan lejos como sea posible
+   por una rama antes de retroceder. Esto significa que DFS puede encontrar
+   primero un camino largo antes de explorar caminos más cortos.
+
+2. ESTRUCTURA DE DATOS:
+   DFS usa una PILA (LIFO - Last In, First Out), lo que hace que explore
+   profundamente una rama antes de considerar alternativas.
+
+3. COMPLETITUD SIN OPTIMALIDAD:
+   • Completitud: DFS encuentra una solución si existe (en grafos finitos)
+   • Optimalidad: DFS NO garantiza el camino más corto
+
+EJEMPLO EN NUESTRO GRAFO:
+   BFS encontró: Start → A → C → Goal (3 saltos)
+   DFS encontró: Start → A → C → Goal (3 saltos)
+
+   En este caso particular, ambos encontraron el mismo camino óptimo,
+   pero esto es coincidencia - solo BFS lo GARANTIZA siempre.
+
+6. CONCLUSIONES
+----------------------------------------------------------------------
+• Usa BFS cuando necesites el camino MÁS CORTO (número mínimo de saltos)
+• Usa DFS cuando solo necesites ENCONTRAR un camino (no el más corto)
+• BFS consume más memoria pero garantiza optimalidad
+• DFS consume menos memoria pero puede encontrar caminos subóptimos
+
+======================================================================
+FIN DEL ANÁLISIS
+======================================================================
