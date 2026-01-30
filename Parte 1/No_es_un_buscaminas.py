@@ -112,7 +112,7 @@ for step in range(20):
         f"Suciedad limpiada={agent.cleaned}"
     )
 
-# -------- GRÁFICA BONITA 💜 --------
+# -------- GRÁFICA --------
 
 plt.figure(figsize=(8, 5))
 
