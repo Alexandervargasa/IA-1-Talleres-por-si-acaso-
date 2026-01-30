@@ -1,2 +1,2 @@
 # IA-1-Talleres-por-si-acaso-
-Chozo te queremos xd
+Choso te queremos xd
